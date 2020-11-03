@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>javascript workshop 2020</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.2/styles/dracula.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.2/highlight.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+  </head>
+  <body>
+    <div class="header">
+      <span id="prev">&larr;</span>
+      <span id="next">&rarr;</span>
+    </div>
+    <!-- SLIDES -->
+
+    <div class="slide">
+      <h2>javascript workshop 2020</h2>
+      <pre>
+      intro and questions
+      exercises
+        functions
+        objects
+        arrays
+        fetch
+        promise
+        try/catch
+        modules
+        testing
+      code review
+      </pre>
+    </div>
+    <div class="slide">
+      <h2>function</h2>
+      <pre><code class="language-js">
+      const f = () =&gt; {}
+      // declare
+      // call with arguments
+      // use arguments
+      // return object
+      // return function
+      // callbacks
+
+      </code></pre>
+    </div>
+
+    <div class="slide">
+      <h2>object</h2>
+      <pre><code class="language-js">
+      const x = {}
+      // create object
+      // get property
+      // compare
+      // spread
+      // destructing assignment
+      // trenary operator
+      </code></pre>
+    </div>
+
+    <div class="slide">
+      <h2>array</h2>
+      <pre><code class="language-js">
+      const xs = []
+      // create array
+      // push/pop
+      // loop
+      // spread
+      // destructuring assignment
+      // map/reduce
+      </code></pre>
+    </div>
+
+    <div class="slide">
+      <h2>fetch</h2>
+      <pre><code class="language-js">
+      await fetch(
+        "https://api.thecatapi.com/v1/images/search?size=full",
+      );
+      </code></pre>
+      <p>(open console to see the output)</p>
+      <script>
+        (async () => {
+          try {
+            const response = await fetch(
+              "https://api.thecatapi.com/v1/images/search?size=full",
+            );
+            const data = await response.json();
+            return { status: "ok", data };
+          } catch (err) {
+            return { status: "error", err };
+          }
+        })().then(console.log);
+      </script>
+    </div>
+
+    <div class="slide">
+      <h2>promise</h2>
+      <pre><code class="language-js">
+      // new Promise
+      // all/any
+
+      </code></pre>
+    </div>
+
+    <div class="slide">
+      <h2>async/await</h2>
+      <pre><code class="language-js">
+      // declare
+      // call
+      </code></pre>
+    </div>
+
+    <div class="slide">
+      <h2>try/catch</h2>
+      <pre><code class="language-js">
+      try {
+        const response = await fetch()
+        return {status: "ok", response}
+      } catch(err) {
+        console.log(err)
+        return {status: "err", err}
+      }
+      </code></pre>
+    </div>
+
+    <div class="slide">
+      <h2>modules</h2>
+      <pre><code class="language-js">
+      // export
+      // import
+      // node modules
+      </code></pre>
+    </div>
+
+    <div class="slide">
+      <h2>test</h2>
+      <pre><code class="language-js">
+      // describe/it
+      // expect
+      // setup and run
+      </code></pre>
+    </div>
+
+    <!-- THE END -->
+  </body>
+  <script src="slides.js" defer></script>
+</html>
